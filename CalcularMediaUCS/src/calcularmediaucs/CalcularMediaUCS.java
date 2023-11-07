@@ -55,14 +55,14 @@ public class CalcularMediaUCS {
         panel.setLayout(null);
 
         JButton disciplinasButton = new JButton("Média Disciplinas");
-        disciplinasButton.setBounds(10, 10, 160, 25);
+        disciplinasButton.setBounds(10, 10, 250, 25);
         panel.add(disciplinasButton);
         disciplinasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double notaUA = getNota("Insira a Nota nas Unidades de Aprendizagem (UA):", 10);
-                double questionario = getNota("Insira o Questionário Avaliativo:", 10);
-                double notaProva = getNota("Insira a Melhor nota na prova:", 10);
+                double notaUA = getNota("Insira a nota nas Unidades de Aprendizagem (UA):", 10);
+                double questionario = getNota("Insira a nota no Questionário Avaliativo:", 10);
+                double notaProva = getNota("Insira a melhor nota na Prova ou Exame:", 10);
 
                 double mediaFinal_disciplina = (notaUA * 0.2) + (questionario * 0.2) + (notaProva * 0.6);
                 JOptionPane.showMessageDialog(null, "A média final é: " + mediaFinal_disciplina);
@@ -76,15 +76,15 @@ public class CalcularMediaUCS {
         });
 
         JButton projetoButton = new JButton("Média Projeto Integrador");
-        projetoButton.setBounds(10, 40, 160, 25);
+        projetoButton.setBounds(10, 40, 250, 25);
         panel.add(projetoButton);
         projetoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double notaPrimeiraEtapa = getNota("Insira a Nota Primeira Etapa:", 8);
-                double avaliacaoPrimeiraEtapa = getNota("Insira a Avaliação por pares primeira etapa:", 2);
-                double notaSegundaEtapa = getNota("Insira a Nota segunda etapa:", 8);
-                double avaliacaoSegundaEtapa = getNota("Insira a Avaliação por pares segunda etapa:", 2);
+                double notaPrimeiraEtapa = getNota("Insira a nota na Primeira Etapa:", 8);
+                double avaliacaoPrimeiraEtapa = getNota("Insira a nota na Avaliação Por Pares - Primeira Etapa:", 2);
+                double notaSegundaEtapa = getNota("Insira a nota na Segunda Etapa:", 8);
+                double avaliacaoSegundaEtapa = getNota("Insira a nota na Avaliação Por Pares - Segunda Etapa:", 2);
 
                 double mediaFinal_projeto =
                     ((notaPrimeiraEtapa + avaliacaoPrimeiraEtapa) * 0.4) +
